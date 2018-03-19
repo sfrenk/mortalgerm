@@ -12,7 +12,3 @@ mrt_plot(data)
 \description{
 Creates a survival curve plot from a mrt_table object.
 }
-\examples{
-mrt_plot()
-}
-
