@@ -10,6 +10,8 @@ perform_logranks(data, correct = FALSE)
 \item{data}{mrt_data object}
 
 \item{correct}{apply bonferroni correction to the p-values}
+
+\item{exp}{data contains an "exp" with experiment/replicate ID which should be added as a covariate}
 }
 \description{
 Perform pairwise logrank comparisons between samples in a mrt_table object

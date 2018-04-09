@@ -7,6 +7,6 @@
 
 mrt_plot <- function(data){
     fit<-survfit(Surv(time, status) ~ sample, data = data, conf.type = "log-log")
-    mplot <- ggsurvplot(fit, data = st_mrt)$plot
+    mplot <- ggsurvplot(fit, data = data)$plot
     return(mplot)
 }

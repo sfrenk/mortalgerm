@@ -4,10 +4,12 @@
 \alias{make_mrt_table}
 \title{Make a mrt_table object}
 \usage{
-make_mrt_table(data)
+make_mrt_table(data, censored)
 }
 \arguments{
-\item{data}{Data frame containing mrt assay data. Generation number must be in the first column, and the remaining columns must contain percentage of viable plates for a given strain at the specified generations.}
+\item{data}{Data frame containing mrt assay data. Generation number must be in the first column, and the remaining columns must contain the number of viable plates for a given strain at the specified generations.}
+
+\item{censored}{Optional data frame containing number of censored individuals at each generation, with the same column order as data.}
 }
 \description{
 Creates a mrt_table object from a data frame containing mrt assay data.
