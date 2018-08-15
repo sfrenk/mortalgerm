@@ -4,7 +4,7 @@
 \alias{convert_mrt}
 \title{Make a mrt_table object}
 \usage{
-convert_mrt(gen, count, censor_col)
+convert_mrt(gen, count, censor_col = NULL)
 }
 \arguments{
 \item{data}{Data frame containing mrt assay data. Generation number must be in the first column, and the remaining columns must contain percentage of viable plates for a given strain at the specified generations.}

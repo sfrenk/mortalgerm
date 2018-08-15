@@ -4,7 +4,7 @@
 #' @param data Data frame containing mrt assay data. Generation number must be in the first column, and the remaining columns must contain percentage of viable plates for a given strain at the specified generations.
 #' @export
 
-convert_mrt <- function(gen, count, censor_col){
+convert_mrt <- function(gen, count, censor_col = NULL){
     
     # Setup dataframe
     data_frame_out <- data.frame("time" = numeric(), "status" = numeric())
@@ -28,6 +28,13 @@ convert_mrt <- function(gen, count, censor_col){
             data_frame_out <- rbind(data_frame_out, samples)
         }
         prev_count <- count[i]
+    }
+    
+    # Account for individuals that are still alive at the end
+    if (prev_count > 0){
+        samples <- data.frame("time" = rep(gen[length(gen)], prev_count), "status" = (rep(0, prev_count)))
+        data_frame_out <- rbind(data_frame_out, samples)
+        
     }
     return(data_frame_out)    
 }

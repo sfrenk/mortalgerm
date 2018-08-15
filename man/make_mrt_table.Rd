@@ -4,7 +4,7 @@
 \alias{make_mrt_table}
 \title{Make a mrt_table object}
 \usage{
-make_mrt_table(data, censored)
+make_mrt_table(data, censored = NULL)
 }
 \arguments{
 \item{data}{Data frame containing mrt assay data. Generation number must be in the first column, and the remaining columns must contain the number of viable plates for a given strain at the specified generations.}
