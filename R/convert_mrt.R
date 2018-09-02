@@ -1,7 +1,9 @@
-#' Make a mrt_table object
+#' Make a mrt_table object from generation, count and censoring data for one sample
 #'
-#' Creates a mrt_table object from a data frame containing mrt assay data.
-#' @param data Data frame containing mrt assay data. Generation number must be in the first column, and the remaining columns must contain percentage of viable plates for a given strain at the specified generations.
+#' Creates a mrt
+#' @param gen vector of generations
+#' @param count vector of counts (number of individuals still alive) at each generation
+#' @param censor_col optional vector of number of censored individuals at each generation
 #' @export
 
 convert_mrt <- function(gen, count, censor_col = NULL){

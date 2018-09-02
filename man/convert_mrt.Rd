@@ -2,13 +2,17 @@
 % Please edit documentation in R/convert_mrt.R
 \name{convert_mrt}
 \alias{convert_mrt}
-\title{Make a mrt_table object}
+\title{Make a mrt_table object from generation, count and censoring data for one sample}
 \usage{
 convert_mrt(gen, count, censor_col = NULL)
 }
 \arguments{
-\item{data}{Data frame containing mrt assay data. Generation number must be in the first column, and the remaining columns must contain percentage of viable plates for a given strain at the specified generations.}
+\item{gen}{vector of generations}
+
+\item{count}{vector of counts (number of individuals still alive) at each generation}
+
+\item{censor_col}{optional vector of number of censored individuals at each generation}
 }
 \description{
-Creates a mrt_table object from a data frame containing mrt assay data.
+Creates a mrt
 }

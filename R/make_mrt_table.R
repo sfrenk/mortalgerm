@@ -1,4 +1,4 @@
-#' Make a mrt_table object
+#' Make a mrt_table object from a dataframe containing survival data for one or more samples
 #'
 #' Creates a mrt_table object from a data frame containing mrt assay data.
 #' @param data Data frame containing mrt assay data. Generation number must be in the first column, and the remaining columns must contain the number of viable plates for a given strain at the specified generations.

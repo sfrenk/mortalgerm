@@ -2,8 +2,8 @@
 #'
 #' @param data mrt_data object
 #' @param correct apply bonferroni correction to the p-values
-#' @param exp data contains an "exp" with experiment/replicate ID which should be added as a covariate
 #' @import survival
+#' @importFrom stats pchisq
 #' @export
 
 

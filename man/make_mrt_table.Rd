@@ -2,7 +2,7 @@
 % Please edit documentation in R/make_mrt_table.R
 \name{make_mrt_table}
 \alias{make_mrt_table}
-\title{Make a mrt_table object}
+\title{Make a mrt_table object from a dataframe containing survival data for one or more samples}
 \usage{
 make_mrt_table(data, censored = NULL)
 }
